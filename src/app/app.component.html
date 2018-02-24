@@ -1,0 +1,24 @@
+It works!!
+<mat-toolbar color="primary" >
+    <mat-toolbar-row>
+      <span>MyCloud App</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+      <mat-card class="example-card">
+        <mat-card-header>
+         <div mat-card-avatar class="example-header-image"></div>
+             <mat-card-title>Fuckedup Dude</mat-card-title>
+              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+           </mat-card>
+ <div class="form-color">
+        <mat-form-field>
+                <input matInput placeholder="Expolre Music" (keyup)="searchMusic()" name="searchText" [(ngModel)]="searchText">
+      </mat-form-field>       
+</div>
+<div *ngIf="searchRes">
+  <div ngFor="let res of searchRes" >
+    <h4>{{res.name}}</h4>
+    <span *ngFor=" let genre of res.genres">{{genre}}</span>
+  </div>
+</div>
